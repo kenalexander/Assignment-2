@@ -44,9 +44,8 @@
             <TextField fx:id="vehicleModelTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="vehicleColorTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <TextField fx:id="descriptionTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <DatePicker fx:id="yearReleasedDatePicker" GridPane.rowIndex="5" />
+            <DatePicker fx:id="yearReleasedDatePicker" promptText="Year Released" GridPane.rowIndex="5" />
             <Label text="Ask Price" GridPane.rowIndex="6" />
-            <TextField fx:id="yearReleasedTextField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <TextField fx:id="askPriceTextField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
          </children>
       </GridPane>
@@ -57,6 +56,6 @@
       </Label>
       <Button fx:id="addImageButton" layoutX="51.0" layoutY="526.0" mnemonicParsing="false" onAction="#addProduct" text="Add Image" />
       <ImageView fx:id="productImage" fitHeight="193.0" fitWidth="250.0" layoutX="301.0" layoutY="526.0" pickOnBounds="true" preserveRatio="true" />
-      <Button layoutX="51.0" layoutY="673.0" mnemonicParsing="false" onAction="#addProduct" text="Button" />
+      <Button layoutX="51.0" layoutY="673.0" mnemonicParsing="false" onAction="#addProduct" text="Add Product" />
    </children>
 </AnchorPane>
