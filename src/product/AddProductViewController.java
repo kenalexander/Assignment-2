@@ -102,12 +102,9 @@ public class AddProductViewController implements Initializable {
         Parent parent = loader.load();
         Scene newScene = new Scene(parent);
 
-        //access the controller of the new Scene and send over
-        //the current list of employees
         ProductViewController controller = loader.getController();
         controller.loadProducts(products);
 
-        //Get the current "stage" (aka window)
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 
         //change the scene to the new scene
