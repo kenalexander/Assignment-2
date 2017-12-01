@@ -248,6 +248,7 @@ public class Product{
         if (vehicleGenre.isEmpty()){
 
             throw new IllegalArgumentException("Field cannot be left blank");
+
         }
         else if (vehicleGenre.matches("[a-zA-Z\\-]*")) {
 

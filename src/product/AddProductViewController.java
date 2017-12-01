@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -41,6 +42,8 @@ public class AddProductViewController implements Initializable {
     @FXML private DatePicker yearReleasedDatePicker;
     @FXML private TextField askPriceTextField;
     @FXML private Button addImageButton;
+    @FXML private Label errorLabel;
+
 
 
     @FXML private ImageView productImage;
@@ -113,6 +116,10 @@ public class AddProductViewController implements Initializable {
         stage.show();
     }
 
+    public void setErrorLabel(){
+        errorLabel.setText("");
+    }
+
     /**
      * Method to set the yearReleasedTextField to the LocalDate value of DatePicker
      */
@@ -128,13 +135,11 @@ public class AddProductViewController implements Initializable {
      */
     public void addImageButtonPressed(ActionEvent event)
     {
-        //get the stage to open a new window
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 
         fileChooser = new FileChooser();
         fileChooser.setTitle("Open Image");
 
-        //filter for only .jpg and .png files
         FileChooser.ExtensionFilter jpgFilter
                 = new FileChooser.ExtensionFilter("Image File (*.jpg)", "*.jpg");
         FileChooser.ExtensionFilter pngFilter
@@ -147,14 +152,12 @@ public class AddProductViewController implements Initializable {
         File userDirectory = new File(userDirectoryString);
 
         if (!userDirectory.canRead())
-            userDirectory = new File("./Pictures");
+            userDirectory = new File(System.getProperty("user.home"));
 
         fileChooser.setInitialDirectory(userDirectory);
 
-        //open the file dialog window
         img = fileChooser.showOpenDialog(stage);
 
-        //ensure the user selected a file
         if (img.isFile())
         {
             try

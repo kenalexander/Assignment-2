@@ -100,6 +100,7 @@ public class ProductViewController implements Initializable {
         calculateValue();
         calculateTotalProduct();
 
+
     }
 
     /**
