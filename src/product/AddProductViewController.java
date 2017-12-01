@@ -143,12 +143,11 @@ public class AddProductViewController implements Initializable {
         fileChooser.getExtensionFilters().addAll(jpgFilter, pngFilter);
 
 
-        //Set to the user's picture directory or C drive if not available
         String userDirectoryString = System.getProperty("user.home")+"\\Pictures";
         File userDirectory = new File(userDirectoryString);
 
         if (!userDirectory.canRead())
-            userDirectory = new File("c:/");
+            userDirectory = new File("./Pictures");
 
         fileChooser.setInitialDirectory(userDirectory);
 

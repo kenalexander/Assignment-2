@@ -85,6 +85,8 @@ public class ProductViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
+
+
         vehicleNameColumn.setCellValueFactory(new PropertyValueFactory<Product, String>("vehicleName"));
         vehicleGenreColumn.setCellValueFactory(new PropertyValueFactory<Product, String>("vehicleGenre"));
         vehicleModelColumn.setCellValueFactory(new PropertyValueFactory<Product, String>("vehicleModel"));
