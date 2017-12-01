@@ -34,7 +34,7 @@
         </rowConstraints>
          <children>
             <Label text="Name" />
-            <TextField fx:id="vehicalNameTextField" GridPane.columnIndex="1" />
+            <TextField fx:id="vehicleNameTextField" GridPane.columnIndex="1" />
             <Label text="Genre" GridPane.rowIndex="1" />
             <Label text="Model" GridPane.rowIndex="2" />
             <Label text="Color" GridPane.rowIndex="3" />

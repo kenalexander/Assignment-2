@@ -55,6 +55,15 @@ public class AddProductViewController implements Initializable {
         this.products = products;
     }
 
+    /**
+     * Method that listens for the ActionEvent of the FXML addButton
+     * Instantiates a new object Product
+     * Adds the newly created object to the ObservableList
+     * Sets the FXML yearReleasedTextField to the value given by yearReleasedDatePicker.getValue()
+     * @param event
+     * @throws IOException
+     */
+
     public void addProduct(ActionEvent event)
     {
         try{
@@ -70,40 +79,14 @@ public class AddProductViewController implements Initializable {
             products.add(product);
 
             changeSceneAPVC(event, "ProductView.fxml");
-            setYearReleasedTextField();
+
 
         }catch(IOException e){
 
         }
 
     }
-    /**
-     * Method that listens for the ActionEvent of the FXML addButton
-     * Instantiates a new object Product
-     * Adds the newly created object to the ObservableList
-     * Sets the FXML yearReleasedTextField to the value given by yearReleasedDatePicker.getValue()
-     * @param event
-     * @throws IOException
-     */
-    /*public void addProductButtonPressed(ActionEvent event) throws IOException{
-        try{
 
-            Product product = new Product(vehicleNameTextField.getText(),
-                                          vehicleGenreTextField.getText(),
-                                          vehicleModelTextField.getText(),
-                                          vehicleColorTextField.getText(),
-                                          descriptionTextField.getText(),
-                                          yearReleasedDatePicker.getValue(),
-                                          askPriceTextField.getText());
-
-            products.add(product);
-
-            changeSceneAPVC(event, "ProductView.fxml");
-            setYearReleasedTextField();
-        }catch(IllegalArgumentException e){
-            System.err.print(e.getMessage());
-        }
-    }*/
 
     /**
      * Method to call for a scene change
