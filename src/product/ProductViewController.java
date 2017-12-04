@@ -75,6 +75,10 @@ public class ProductViewController implements Initializable {
         products.add(new Product("Ford", "Truck", "F250", "Black", "New", LocalDate.of(1992, Month.MARCH, 15), "25000"));
         products.add(new Product("Chevrolet", "Truck", "Silverado", "Grey", "New", LocalDate.of(1992, Month.APRIL, 22), "23000"));
         products.add(new Product("Toyota", "Truck", "Tundra", "Black", "New", LocalDate.of(1992, Month.JANUARY, 9), "25000"));
+
+        products.add(new Product("Ford", "Truck", "F250", "Black", "New", LocalDate.of(1992, Month.MARCH, 15), "25000"));
+        products.add(new Product("Chevrolet", "Truck", "Silverado", "Grey", "New", LocalDate.of(1992, Month.APRIL, 22), "23000"));
+        products.add(new Product("Toyota", "Truck", "Tundra", "Black", "New", LocalDate.of(1992, Month.JANUARY, 9), "25000"));
         //return the list
         return products;
     }
@@ -84,8 +88,6 @@ public class ProductViewController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
-
 
         vehicleNameColumn.setCellValueFactory(new PropertyValueFactory<Product, String>("vehicleName"));
         vehicleGenreColumn.setCellValueFactory(new PropertyValueFactory<Product, String>("vehicleGenre"));
@@ -99,7 +101,6 @@ public class ProductViewController implements Initializable {
         productTable.setItems(getProducts());
         calculateValue();
         calculateTotalProduct();
-
 
     }
 

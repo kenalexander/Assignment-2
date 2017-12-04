@@ -42,7 +42,7 @@ public class AddProductViewController implements Initializable {
     @FXML private DatePicker yearReleasedDatePicker;
     @FXML private TextField askPriceTextField;
     @FXML private Button addImageButton;
-    @FXML private Label errorLabel;
+    @FXML static Label errorLabel;
 
 
 
@@ -116,9 +116,6 @@ public class AddProductViewController implements Initializable {
         stage.show();
     }
 
-    public void setErrorLabel(){
-        errorLabel.setText("");
-    }
 
     /**
      * Method to set the yearReleasedTextField to the LocalDate value of DatePicker

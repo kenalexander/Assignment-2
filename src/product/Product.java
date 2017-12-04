@@ -6,6 +6,8 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
 import javafx.embed.swing.SwingFXUtils;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javax.imageio.ImageIO;
 import javafx.stage.FileChooser;
@@ -24,7 +26,6 @@ public class Product{
     private String vehicleName, vehicleGenre, vehicleModel, vehicleColor, description, askPrice;
     private LocalDate yearReleased;
     private double sellPrice;
-
     private boolean administrator;
 
     private static int productID = 10001;

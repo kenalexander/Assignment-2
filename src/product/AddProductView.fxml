@@ -57,6 +57,6 @@
       <Button fx:id="addImageButton" layoutX="51.0" layoutY="526.0" mnemonicParsing="false" onAction="#addImageButtonPressed" text="Add Image" />
       <ImageView fx:id="productImage" fitHeight="193.0" fitWidth="250.0" layoutX="301.0" layoutY="526.0" pickOnBounds="true" preserveRatio="true" />
       <Button layoutX="51.0" layoutY="673.0" mnemonicParsing="false" onAction="#addProduct" text="Add Product" />
-      <Label layoutX="283.0" layoutY="750.0" text="Error" visible="false" />
+      <Label fx:id="errorLabel" layoutX="283.0" layoutY="750.0" text="Error" visible="false" />
    </children>
 </AnchorPane>
