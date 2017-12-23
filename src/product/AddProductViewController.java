@@ -85,7 +85,7 @@ public class AddProductViewController implements Initializable {
 
 
         }catch(IOException e){
-
+            errorLabel.setText(e.getMessage());
         }
 
     }

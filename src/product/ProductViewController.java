@@ -1,7 +1,9 @@
 package product;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.*;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.time.LocalDate;
@@ -104,6 +106,8 @@ public class ProductViewController implements Initializable {
 
     }
 
+
+
     /**
      * Closes the application
      * @param event
@@ -144,6 +148,7 @@ public class ProductViewController implements Initializable {
 
         changeScenePVC(event, "AddProductView.fxml");
     }
+
 
     /**
      * Method for changing scenes when called upon
